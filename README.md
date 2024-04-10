@@ -1,10 +1,10 @@
 # TALYPIZZA REDESIGN by Vitor Siqueira
 
-As you are aware, Talyhijo and Talyfiglio need our help, so we need to redesign the legacy pizza shop system to make it look like our own and the Receita Federal doesn’t put the Lion of Receita Federal to eat our heroes. Their lives are in your hands but remember: a good design system is an easy-to-reuse design system. Check the Figma design [here](https://www.figma.com/file/Q4ue68Otj9NyD9erNW5A2D/talypizza?type=design&node-id=0%3A1&mode=design&t=s1b9R9WHum5tyX5Z-1)
+Check the Figma design [here](https://www.figma.com/file/Q4ue68Otj9NyD9erNW5A2D/talypizza?type=design&node-id=0%3A1&mode=design&t=s1b9R9WHum5tyX5Z-1)
 
 ## TASK 1 - INDEX PAGE
 
-We will get started by building the index page, which shows the list of pizzas available for purchase as well as the logic of adding a pizza to the cart. Free tip: remember to create small components that can be reused alongside the app for the next challenges and don’t forget the unit tests. Since we are doing a money wash, we don’t want normal people to order pizza or we’ll need to buy microwave pizzas and send them to people’s houses. So, the way to go to the checkout page is to click on the footer: “Não lavabos dinheiro”. Consider this an easter egg.
+We will get started by building the index page, which shows the list of pizzas available for purchase as well as the logic of adding a pizza to the cart. Free tip: remember to create small components that can be reused alongside the app for the next challenges and don’t forget the unit tests. We don’t want normal people to order pizza or we’ll need to buy microwave pizzas and send them to people’s houses. So, the way to go to the checkout page is to click on the footer: “Não lavabos dinheiro”. Consider this an easter egg.
 When a pizza is added to the cart, a key on local storage should be written/updated with the pizza flavors and their quantity. We only want to have one cart key on local storage, so don’t duplicate keys.
 
 ```JS
@@ -37,7 +37,7 @@ It’s time to go to the checkout page. We will need to display to the user the 
 
 ## TASK 3 - CHECKOUT PAGE: PAYMENT INFO
 
-We want money so we can wash it. For that, we will now have a form that contains the credit card so the user can finish the buying process. The payment info will be shown between the address and the cart (the cart must be the last thing above the finish order button) and when the user clicks on finish order it will do the following:
+For that, we will now have a form that contains the credit card so the user can finish the buying process. The payment info will be shown between the address and the cart (the cart must be the last thing above the finish order button) and when the user clicks on finish order it will do the following:
 1 - the current cart inside the local storage will be cleaned
 2 - a “last order” key will be created on local storage containing the following: the address info, the payment info, and the cart info (all pizza flavors alongside their quantities)
 3 - the user will be redirected to the index page
@@ -81,35 +81,4 @@ We want money so we can wash it. For that, we will now have a form that contains
 
 ## EXTRA - LIGHT MODE
 
-Research made by the Department of Advanced Research coordinated by Felipe or Jimmy and Jessica Pines in Codeminer University has shown that users do like light mode. So this option should be available on all the pages.
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Research made by the Department of Advanced Research has shown that users do like light mode. So this option should be available on all the pages.
